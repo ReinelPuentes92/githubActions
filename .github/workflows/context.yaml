@@ -14,7 +14,10 @@ jobs:
 
     steps:
       - name: Hola Mundo
-        run: echo "Hola Mundo desde el primer job ${{ env.owner }}"
+        env:
+          name_s: 'First_Job'
+          owner_s: 'Iktan Services'
+        run: echo "Hola Mundo desde el primer job ${{ env.owner }} - ${{ env.owner_s }}"
 
   second_job:
     needs: first_job
