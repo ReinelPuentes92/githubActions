@@ -8,10 +8,13 @@ on:
 jobs:
   first_job:
     runs-on: ubuntu-latest
+    env:
+     name: 'First_Job'
+     owner: 'Iktan Services' 
 
     steps:
       - name: Hola Mundo
-        run: echo "Hola Mundo desde el primer job"
+        run: echo "Hola Mundo desde el primer job ${{ env.owner }}"
 
   second_job:
     needs: first_job
