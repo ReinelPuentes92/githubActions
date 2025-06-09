@@ -19,4 +19,4 @@ jobs:
 
     steps:
       - name: Hola Mundo
-        run: echo "Hola Mundo desde el segundo job"
+        run: echo "Hola Mundo desde el segundo job ${{ git.ref }}"
