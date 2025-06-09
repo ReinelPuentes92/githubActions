@@ -1,0 +1,15 @@
+name: "Deploy to GitHub Actions"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-githubaction:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploying to GitHub Actions"
+      - run: echo "Run migrations"
+      - run: echo "Generate static files"
+      - run: echo "Deploy to production server"
